@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+@import './hamburger.css';
+$container-color: rgba(7, 7, 6, 1);
+$tam-color: rgba(0, 137, 52, 1);
+$bg-color: rgba(0, 190, 52, 0.4);
+/* $glow-from:rgba(0, 150, 52, 0.7);
+$glow-to:rgba(0, 220, 52, 0.9); */
+$glow-from:rgba(0, 220, 52, 0.7);
+$glow-to:rgba(0, 250, 52, 0.9);
+
+body {
+    overflow:hidden;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: "Uchen", serif;
+    background-color: $container-color;
+  }
+
+  .tam {
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    font-size: 18rem;
+    /* color: rgba(0, 99, 38,1); */ /*orginal color*/
+    color: $tam-color;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: 10;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+  .center-circle {
+    /* background-color: rgba(34,34,34,1); */
+    filter: blur(0.8rem) brightness(0.9);
+    opacity: 0.8;
+    background-color: $bg-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    border-radius: 100rem;
+    border: 2rem solid $bg-color;
+    width: 40rem;
+    height: 40rem;
+    opacity:0.6;
+    animation: shrink-grow 20s ease-in-out infinite;
+    /* transition-timing-function: ease-out; */
+  }
+
+  .center-circle.animated {
+    filter: blur(0.9rem) brightness(0.9);
+    overflow: hidden;
+    transform: translate(-50%, -55%) scale(0.3);
+    opacity: 0;
+    animation: scale 15s ease-out infinite;
+    background:radial-gradient(circle at center, transparent 0, $bg-color 60%)
+  }
+
+  .hamburger-container {
+    cursor: pointer;
+    position: fixed;
+    bottom: 4rem;
+    left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    opacity: 0;
+    transition: all 100ms ease;
+}
+
+.hamburger-container:hover {
+    opacity:1
+}
+
+/* .setting-board {
+    position: fixed;
+    bottom: 4rem;
+    left: 0.5rem;
+} */
+  @keyframes shrink-grow {
+    from {
+        transform: translate(-50%, -55%) scale(0.9);
+    }
+    50% {
+      transform: translate(-50%, -55%) scale(1);
+
+    }
+    100% {
+        transform: translate(-50%, -55%) scale(0.9);
+
+    }
+  }
+
+  @keyframes scale {
+    45% {
+        opacity:0.8;
+        filter: blur(0.9rem) brightness(1.1);
+    }
+
+    to {
+      opacity:0.0;
+      transform: translate(-50%, -55%) scale(1.5);
+      filter: blur(1rem) brightness(1);
+    }
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 1rem #fff, 0 0 2rem #fff, 0 0 3rem $glow-from,
+        0 0 4rem $glow-from, 0 0 5rem $glow-from,
+        0 0 6rem $glow-from, 0 0 7rem $glow-from;
+    }
+
+    to {
+      text-shadow: 0 0 2rem #fff, 0 0 3rem #ff4da6,
+        0 0 4rem $glow-to, 0 0 5rem $glow-to,
+        0 0 6rem $glow-to, 0 0 7rem $glow-to,
+        0 0 8rem $glow-to;
+    }
+  }
