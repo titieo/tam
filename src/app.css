@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap'); */
+
 @import './hamburger.css';
 $container-color: rgba(7, 7, 6, 1);
 $tam-color: rgba(0, 137, 52, 1);
@@ -8,6 +9,15 @@ $glow-to:rgba(0, 220, 52, 0.9); */
 $glow-from:rgba(0, 220, 52, 0.7);
 $glow-to:rgba(0, 250, 52, 0.9);
 
+/* uchen-regular - tibetan */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Uchen';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Uchen-Regular.ttf') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+/* uchen-regular - tibetan */
 body {
     overflow:hidden;
 }
@@ -59,19 +69,21 @@ body {
     overflow: hidden;
     transform: translate(-50%, -55%) scale(0.3);
     opacity: 0;
-    animation: scale 15s ease-out infinite;
+    animation: scale 10s cubic-bezier(.17,.67,.27,.24) infinite;
     background:radial-gradient(circle at center, transparent 0, $bg-color 60%)
   }
 
   .hamburger-container {
     cursor: pointer;
     position: fixed;
-    bottom: 4rem;
-    left: 0.5rem;
+    bottom: 1rem;
+    left: 1rem;
     display: flex;
-    justify-content: center;
-    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
     opacity: 0;
+    z-index:100;
     transition: all 100ms ease;
 }
 
@@ -79,11 +91,67 @@ body {
     opacity:1
 }
 
-/* .setting-board {
+.hamburger-lines {
+    margin-left:0.5rem;
+    z-index:100;
+}
+
+.setting-board {
+    margin-bottom: 1rem;
+    color:white;
+    padding: 1rem 2rem;
+    border-radius:1rem;
+    background: rgba(20,25,20,0.8);
+    width: max-content;
+    z-index:90;
+
+    /* Animation */
+    opacity:0;
+    transform:translateY(100%);
+    transition: all 500ms;
+}
+
+.setting-board.isOpen {
+    opacity: 1;
+    transform:translate(0,0)
+}
+
+.setting-board ul {
+    list-style-type: none;
+    padding: 0;
+}
+.setting-board li {
+    cursor: pointer;
+}
+.setting-board label {
+    margin-left: 0.5rem;
+}
+
+.playback {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
     position: fixed;
-    bottom: 4rem;
-    left: 0.5rem;
-} */
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0;
+  }
+  .playback.paused {
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+  }
+  .playback:hover {
+    border-color: transparent transparent transparent #404040;
+    opacity: 1;
+  }
+
   @keyframes shrink-grow {
     from {
         transform: translate(-50%, -55%) scale(0.9);

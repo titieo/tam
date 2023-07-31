@@ -15,9 +15,12 @@
     "postcss-import": "^15.1.0",
     "prettier": "^3.0.0",
     "svelte": "^4.1.0",
+    "svelte-fullpage": "^1.0.9",
     "vite": "^4.4.4"
   },
   "dependencies": {
-    "screenfull": "^6.0.2"
+    "modern-normalize": "^2.0.0",
+    "screenfull": "^6.0.2",
+    "svelte-legos": "^0.2.1"
   }
 }

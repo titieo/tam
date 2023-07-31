@@ -1,5 +1,6 @@
+// import './normalize.css'
+import 'modern-normalize/modern-normalize.css';
 import './reset.css'
-import './normalize.css'
 import './app.css'
 import App from './App.svelte'
 

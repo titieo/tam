@@ -1,5 +1,7 @@
 <script>
   import screenfull from "screenfull";
+  import { storage } from "svelte-legos";
+  import { writable } from "svelte/store";
   const fullScreenAction = () => {
     if (screenfull.isEnabled) {
       screenfull.toggle();
@@ -7,24 +9,56 @@
   };
   let paused = true;
   const growCirclesCount = 1;
-  let hamburgerOpen = false;
-  import { fly } from "svelte/transition";
+  let hamburgerOpen = true;
+  let bgLightEnabled = storage(writable(true), "bgLightEnabled"),
+    movingLight = storage(writable(true), "movingLight");
+  import { fade } from "svelte/transition";
+  import { Fullpage, FullpageSection, FullpageSlide } from "svelte-fullpage";
 </script>
 
 <main class="container">
   <div class="tam" on:click={fullScreenAction}>
     <span>ཏཱྂ</span>
-    {#each Array(growCirclesCount) as _, index (index)}
-      <div
-        class="center-circle animated"
-        style="animation-delay: {index * 13}s"
-      />
-    {/each}
-    <div class="center-circle" />
+    {#if $movingLight}
+      {#each Array(growCirclesCount) as _, index (index)}
+        <div
+          class="center-circle animated"
+          style="animation-delay: {index * 13}s"
+        />
+      {/each}
+    {/if}
+
+    {#if $bgLightEnabled}
+      <div class="center-circle" transition:fade={{ duration: 200 }} />
+    {/if}
   </div>
 </main>
 
-<div class="hamburger-container" style="display:none;">
+<div class="hamburger-container">
+  <div class="setting-board {hamburgerOpen ? 'isOpen' : ''}">
+    <ul>
+      <li>
+        <input
+          type="checkbox"
+          name="bgLightEnabled"
+          id="bgLightEnabled"
+          bind:checked={$bgLightEnabled}
+        />
+        <label for="bgLightEnabled">bgLightEnabled</label>
+      </li>
+
+      <li>
+        <input
+          type="checkbox"
+          name="movingLight"
+          id="movingLight"
+          bind:checked={$movingLight}
+        />
+        <label for="movingLight">movingLight</label>
+      </li>
+    </ul>
+  </div>
+  <!-- {/if} -->
   <button
     class="hamburger-lines {hamburgerOpen ? 'is-active' : ''}"
     on:click={() => (hamburgerOpen = !hamburgerOpen)}
@@ -33,11 +67,6 @@
     <span class="line line2" />
     <span class="line line3" />
   </button>
-  {#if hamburgerOpen}
-    <div transition:fly={{ duration: 200 }} class="setting-board">
-      fades in and out
-    </div>
-  {/if}
 </div>
 
 <audio src="greentaramantra.mp3" loop bind:paused hidden />
@@ -46,30 +75,3 @@
   on:click={() => (paused = !paused)}
   class="playback {paused ? 'paused' : ''}"
 />
-
-<style>
-  .playback {
-    border: 0;
-    background: transparent;
-    box-sizing: border-box;
-    width: 0;
-    height: 74px;
-    border-color: transparent transparent transparent #202020;
-    transition: 100ms all ease;
-    cursor: pointer;
-    border-style: solid;
-    border-width: 37px 0 37px 60px;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    opacity: 0;
-  }
-  .playback.paused {
-    border-style: double;
-    border-width: 0px 0 0px 60px;
-  }
-  .playback:hover {
-    border-color: transparent transparent transparent #404040;
-    opacity: 1;
-  }
-</style>
