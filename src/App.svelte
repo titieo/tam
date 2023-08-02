@@ -5,7 +5,7 @@
   import { Fullpage, FullpageSection, FullpageSlide } from "svelte-fullpage";
 </script>
 
-<Fullpage>
+<Fullpage disableArrowsNavigation>
   <FullpageSection title="Schedule">
     <FullpageSlide>
       <Schedule />

@@ -43,3 +43,8 @@ body,
 .end-table {
   border-radius: 1px;
 }
+
+.svelte-fp-active-dot,
+button[title] {
+  display: none !important;
+}

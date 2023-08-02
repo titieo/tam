@@ -14,7 +14,7 @@
     "Sunday",
   ];
   let isMorning = dayjs().hour() <= 12;
-  //   let isMorning = false;
+  //   isMorning = false;
   import "./Schedule.css";
 </script>
 
