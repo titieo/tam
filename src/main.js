@@ -1,4 +1,3 @@
-// import './normalize.css'
 import 'modern-normalize/modern-normalize.css';
 import './reset.css'
 import './app.css'

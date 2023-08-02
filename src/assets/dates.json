@@ -1,0 +1,59 @@
+{
+  "day": {
+    "5h - 8h30": [{ "name": "Practice - Ăn Sáng", "colspan": 7 }],
+    "8h30 - 6h30": [{ "name": "Workout - Clean up", "colspan": 7 }],
+    "9h - 9h45": [
+      ["Toán", 2],
+      ["Sinh", 2],
+      ["IELTS", 2],
+      ["Hoá", 2],
+      ["Sinh", 2],
+      ["GL", 2],
+      { "name": "Hoá (T.Phúc)", "rowspan": 3, "class": "extra-class" }
+    ],
+    "9h50 - 10h25": [],
+    "10h30 - 11h15": [{ "name": "Hobby", "colspan": "6", "notEndRow": true }],
+    "11h30 - 1h": [
+      { "name": "🌞🌞🌞Sleep 💤💤💤", "colspan": 7, "class": "sleep end-row" }
+    ]
+  },
+  "afternoon": {
+    "1h-1h45": [{ "name": "Hobby", "colspan": 6 }, ["IELTS", 4]],
+    "1h50 - 2h35": [
+      ["IELTS", 3],
+      ["Hoá", 2],
+      ["Toán", 3],
+      ["IELTS", 2],
+      ["Toán", 3],
+      { "name": "GL", "rowspan": 5, "notEndRow": true }
+    ],
+    "2h40 - 3h25": [],
+    "3h30 - 4h15": ["Toán", { "name": "Sinh", "notEndRow": true }],
+    "4h15 - 4h45": [{ "name": "Workout", "colspan": 5 }, "Workout"],
+    "4h45 - 5h45": [
+      { "name": "Showers & Chills", "colspan": 5 },
+      "Showers & Chills"
+    ],
+    "6h - 6h45": [
+      ["Hoá", 3],
+      ["IELTS", 4],
+      ["Hoá (T.Phúc)", 4, true],
+      ["Toán (Star)", 4, true],
+      ["Toán (Star)", 3, true],
+      {
+        "name": "Chill & Relax",
+        "rowspan": 4,
+        "colspan": 2,
+        "class": "chill end-row"
+      }
+    ],
+    "6h50 - 7h15": [],
+    "7h15 - 8h": [],
+    "8h - 9h05": ["Toán", { "name": "Toán", "notEndRow": true }],
+    "9h05-9h35": [{ "name": "Workout", "colspan": 7, "class": "end-row" }],
+    "9h35 - 10h": [{ "name": "Chill", "colspan": 7, "class": "end-row" }],
+    "10h": [
+      { "name": "🌜🌜🌜 Sleep 💤💤💤", "colspan": 7, "class": "sleep end-row" }
+    ]
+  }
+}
