@@ -73,7 +73,7 @@
         <td colspan="8">☀️😪💤</td>
       </tr> -->
       {:else}
-        <Rows data={dates.afternoon} />
+        <Rows data={dates.night} />
       {/if}
     </tbody>
   </table>
