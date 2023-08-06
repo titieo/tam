@@ -5,19 +5,23 @@
   const fullScreenAction = () => {
     if (screenfull.isEnabled) {
       screenfull.toggle();
+      console.log("Fullscreen!!!");
+    } else {
+      console.error("Unable to fullscreen");
     }
   };
   let paused = true;
-  const growCirclesCount = 1;
+  const growCirclesCount = 2;
   let hamburgerOpen = true;
   let bgLightEnabled = storage(writable(true), "bgLightEnabled"),
     movingLight = storage(writable(true), "movingLight");
   import { fade } from "svelte/transition";
-  import "./TAM.css";
+  export let extraTamClass = "";
+  //   import "./TAM.css";
 </script>
 
 <div class="container container-tam">
-  <main class="tam" on:click={fullScreenAction}>
+  <main class="tam {extraTamClass}" on:click={fullScreenAction}>
     <span>ཏཱྂ</span>
     {#if $movingLight}
       {#each Array(growCirclesCount) as _, index (index)}
@@ -35,6 +39,8 @@
 
   <div class="hamburger-container">
     <div class="setting-board {hamburgerOpen ? 'isOpen' : ''}">
+      <h4>Green Tara</h4>
+      <h4>TAM Seed Syllable</h4>
       <ul>
         <li>
           <input
@@ -69,6 +75,8 @@
   </div>
 
   <audio src="greentaramantra.mp3" loop bind:paused hidden />
+
+  <!-- <slot /> -->
 
   <button
     on:click={() => (paused = !paused)}

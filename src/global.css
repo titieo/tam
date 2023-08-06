@@ -1,0 +1,58 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap'); */
+@import "./hamburger.css";
+$container-color: rgba(7, 7, 6, 1);
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Poiret+One&family=Work+Sans:wght@400;600;700;800&display=swap");
+
+/* uchen-regular - tibetan */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Uchen";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Uchen-Regular.ttf") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* uchen-regular - tibetan */
+body,
+#app,
+.container {
+  /* overflow:hidden; */
+  height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-tam {
+  overflow: hidden;
+  font-family: "Uchen", serif;
+  background-color: $container-color;
+}
+
+.container-schedule {
+}
+
+.end-col,
+.end-col td {
+  border-bottom: none;
+}
+
+.end-row,
+.end-row td {
+  border-right: none;
+}
+
+.end-table {
+  border-radius: 1px;
+}
+
+div.svelte-tl5y4n {
+  opacity: 0;
+  transition: all 200ms;
+}
+div.svelte-tl5y4n:hover {
+  opacity: 1;
+}
+
+.greentara-tam {
+  transform: scale(0.1);
+}
