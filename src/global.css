@@ -52,6 +52,13 @@ div.svelte-tl5y4n {
 div.svelte-tl5y4n:hover {
   opacity: 1;
 }
+div.svelte-leld1s {
+  opacity: 0;
+  transition: all 200ms;
+}
+div.svelte-leld1s:hover {
+  opacity: 1;
+}
 
 .greentara-tam {
   transform: scale(0.1);

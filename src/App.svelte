@@ -3,6 +3,7 @@
   import Schedule from "./components/Schedule.svelte";
   import Clock from "./components/Clocks.svelte";
   import GreenTara from "./components/Green Tara.svelte";
+  import Yidams from "./components/Yidams.svelte";
   import { Fullpage, FullpageSection, FullpageSlide } from "svelte-fullpage";
 </script>
 
@@ -19,7 +20,9 @@
     <FullpageSlide>
       <Tam />
     </FullpageSlide>
-
     <FullpageSlide><GreenTara /></FullpageSlide>
+  </FullpageSection>
+  <FullpageSection>
+    <Yidams />
   </FullpageSection>
 </Fullpage>

@@ -18,7 +18,7 @@ $glow-to: rgba(0, 250, 52, 0.9);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
-  z-index: 10;
+  /* z-index: 1; */
   animation: glow 3s ease-in-out infinite alternate;
 }
 .center-circle {
