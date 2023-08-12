@@ -16,8 +16,8 @@
     movingLight = storage(writable(true), "movingLight");
   let greenTaraLight = storage(writable(false), "greenTaraLight"),
     tamBig = storage(writable(false), "tamBig");
-
-  let myGuru = storage(writable(false), "myGuru");
+  //   let bgIsLight = storage(writable(true), "bgIsLight");
+  //   let myGuru = storage(writable(false), "myGuru");
   import { fade } from "svelte/transition";
   //   import "./TAM.css";    screenfull.toggle();
 </script>
@@ -119,7 +119,8 @@
   />
 </div>
 
-<style>
+<style lang="postcss">
+  $glow-from: rgba(0, 220, 52, 0.7);
   img {
     height: 100vh;
     position: absolute;
@@ -137,6 +138,12 @@
     scale: 0.14;
     top: 20%;
     left: 46%;
+    /* transform: all ; */
+    transition: all 1s;
+  }
+  .greentara-tam.big {
+    scale: 0.16;
+    transition: all 1s;
   }
 
   .greentara-animated {

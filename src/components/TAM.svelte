@@ -27,8 +27,9 @@
       {#each Array(growCirclesCount) as _, index (index)}
         <div
           class="center-circle animated"
-          style="animation-delay: {index * 13}s"
+          style="animation-delay: {index * 14}s"
         />
+        <!-- Old value: 13s -->
       {/each}
     {/if}
 

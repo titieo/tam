@@ -144,7 +144,8 @@ $glow-to: rgba(0, 250, 52, 0.9);
 
   to {
     opacity: 0;
-    transform: translate(-50%, -55%) scale(1.5);
+    transform: translate(-50%, -55%) scale(1.6);
+    /* Old value:scale(1.5) */
     filter: blur(1rem) brightness(1);
   }
 }

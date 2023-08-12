@@ -9,20 +9,20 @@
 
 <Fullpage disableArrowsNavigation disableDragNavigation>
   <FullpageSection title="Schedule">
-    <FullpageSlide>
+    <FullpageSlide title="Schedule">
       <Schedule />
     </FullpageSlide>
-    <FullpageSlide>
+    <FullpageSlide title="Clock">
       <Clock />
     </FullpageSlide>
   </FullpageSection>
   <FullpageSection title="Seed Syllables" style="background:#070706">
-    <FullpageSlide>
+    <FullpageSlide title="TAM">
       <Tam />
     </FullpageSlide>
-    <FullpageSlide><GreenTara /></FullpageSlide>
+    <FullpageSlide title="Green Tara"><GreenTara /></FullpageSlide>
   </FullpageSection>
-  <FullpageSection>
+  <!-- <FullpageSection>
     <Yidams />
-  </FullpageSection>
+  </FullpageSection> -->
 </Fullpage>
