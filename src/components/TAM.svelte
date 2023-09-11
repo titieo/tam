@@ -13,7 +13,7 @@
   let paused = true;
   const growCirclesCount = 2;
   let hamburgerOpen = true;
-  let bgLightEnabled = storage(writable(true), "bgLightEnabled"),
+  let bgLightEnabled = storage(writable(false), "bgLightEnabled"),
     movingLight = storage(writable(true), "movingLight");
   import { fade } from "svelte/transition";
   export let extraTamClass = "";

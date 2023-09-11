@@ -23,7 +23,7 @@
 </script>
 
 <img
-  src="green_tara.png"
+  src="green_tara.jpg"
   alt="green tara"
   class={greenTaraLight ? "" : "dark"}
 />
@@ -122,6 +122,7 @@
 <style lang="postcss">
   $glow-from: rgba(0, 220, 52, 0.7);
   img {
+    /* width: 100vw; */
     height: 100vh;
     position: absolute;
     top: 50%;
@@ -130,14 +131,18 @@
     filter: brightness(0.85);
   }
 
+  .tam {
+    font-size: 10rem;
+  }
+
   img.dark {
     opacity: 0.9;
   }
 
   .greentara-tam {
-    scale: 0.14;
-    top: 20%;
-    left: 46%;
+    scale: 0.1;
+    top: 15%;
+    left: 44%;
     /* transform: all ; */
     transition: all 1s;
   }
@@ -147,12 +152,36 @@
   }
 
   .greentara-animated {
-    animation: greentara-scale 20s cubic-bezier(0.17, 0.67, 0.27, 0.24) infinite;
+    animation: greentara-scale-phone 20s cubic-bezier(0.17, 0.67, 0.27, 0.24)
+      infinite;
+  }
+
+  @media (min-width: 768px) {
+    .tam {
+      font-size: 18rem;
+    }
+
+    img {
+      height: 100vh;
+      width: auto;
+    }
+
+    .greentara-tam {
+      scale: 0.14;
+      top: 20%;
+      left: 45%;
+      /* transform: all ; */
+      transition: all 1s;
+    }
+    .greentara-animated {
+      animation: greentara-scale 20s cubic-bezier(0.17, 0.67, 0.27, 0.24)
+        infinite;
+    }
   }
 
   @keyframes greentara-scale {
     45% {
-      opacity: 0.6;
+      opacity: 0.55;
       filter: blur(0.9rem) brightness(1.1);
     }
 
@@ -162,7 +191,22 @@
       filter: blur(1rem) brightness(1);
     }
   }
-  /* .my-guru {
-    opacity: 0.7;
-  } */
+
+  @keyframes greentara-scale-phone {
+    25% {
+      opacity: 0.4;
+      filter: blur(0.9rem) brightness(0.5);
+      /* transform: translate(-50%, -55%) scale(2); */
+    }
+    35% {
+      transform: translate(-50%, -55%) scale(3);
+    }
+    100% {
+      transform: translate(-50%, -55%) scale(3.6);
+      opacity: 0;
+      /* transform: translate(-50%, -55%) scale(5); */
+      filter: blur(1rem) brightness(1);
+    }
+  }
+  /* @media (let mql = window.matchMedia("(max-width: 600px)");) */
 </style>

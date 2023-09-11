@@ -9,14 +9,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.4.2",
-    "autoprefixer": "^10.4.14",
+    "@sveltejs/vite-plugin-svelte": "^2.4.5",
+    "autoprefixer": "^10.4.15",
     "postcss-advanced-variables": "^3.0.1",
     "postcss-import": "^15.1.0",
-    "prettier": "^3.0.0",
-    "svelte": "^4.1.0",
-    "svelte-fullpage": "^1.0.9",
-    "vite": "^4.4.4"
+    "prettier": "^3.0.3",
+    "svelte": "^4.2.0",
+    "svelte-fullpage": "^1.1.0",
+    "vite": "^4.4.9"
   },
   "dependencies": {
     "dayjs": "^1.11.9",
