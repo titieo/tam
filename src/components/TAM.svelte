@@ -2,6 +2,7 @@
   import screenfull from "screenfull";
   import { storage } from "svelte-legos";
   import { writable } from "svelte/store";
+  import { darkTAM } from "./TAM";
   const fullScreenAction = () => {
     if (screenfull.isEnabled) {
       screenfull.toggle();
@@ -15,6 +16,8 @@
   let hamburgerOpen = true;
   let bgLightEnabled = storage(writable(false), "bgLightEnabled"),
     movingLight = storage(writable(true), "movingLight");
+
+  // darkTAM = storage(writable(false), "dark")
   import { fade } from "svelte/transition";
   export let extraTamClass = "";
   //   import "./TAM.css";
@@ -40,28 +43,41 @@
 
   <div class="hamburger-container">
     <div class="setting-board {hamburgerOpen ? 'isOpen' : ''}">
-      <h4>Green Tara</h4>
+      <!-- <h4>Green Tara</h4> -->
       <h4>TAM Seed Syllable</h4>
+
       <ul>
         <li>
           <input
             type="checkbox"
-            name="bgLightEnabled"
-            id="bgLightEnabled"
-            bind:checked={$bgLightEnabled}
+            name="darkTAM"
+            id="darkTAM"
+            bind:checked={$darkTAM}
           />
-          <label for="bgLightEnabled">bgLightEnabled</label>
+          <label for="darkTAM">darkTAM</label>
         </li>
 
-        <li>
-          <input
-            type="checkbox"
-            name="movingLight"
-            id="movingLight"
-            bind:checked={$movingLight}
-          />
-          <label for="movingLight">movingLight</label>
-        </li>
+        <ul>
+          <li>
+            <input
+              type="checkbox"
+              name="bgLightEnabled"
+              id="bgLightEnabled"
+              bind:checked={$bgLightEnabled}
+            />
+            <label for="bgLightEnabled">bgLightEnabled</label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              name="movingLight"
+              id="movingLight"
+              bind:checked={$movingLight}
+            />
+            <label for="movingLight">movingLight</label>
+          </li>
+        </ul>
       </ul>
     </div>
     <!-- {/if} -->

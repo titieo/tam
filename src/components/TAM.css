@@ -4,6 +4,26 @@ $bg-color: rgba(0, 190, 52, 0.4);
 $glow-to:rgba(0, 220, 52, 0.9); */
 $glow-from: rgba(0, 220, 52, 0.7);
 $glow-to: rgba(0, 250, 52, 0.9);
+/* $container-color-dark: rgba(7, 7, 6, 1); */
+$container-color: transparent;
+
+$fiveColors: (
+  "white": #ffffff,
+  "red": #ed1b24,
+  "green": #00a652,
+  "blue": #2e3192,
+  "yellow": #fdaf17
+);
+/* $fiveColors: (
+    "green": green,
+) */
+.container-tam {
+  overflow: hidden;
+  font-family: "Uchen", serif;
+  background-color: $container-color;
+  width: 100vw;
+  height: 100vh;
+}
 
 .tam {
   text-align: center;
