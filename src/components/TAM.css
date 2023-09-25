@@ -7,13 +7,12 @@ $glow-to: rgba(0, 250, 52, 0.9);
 /* $container-color-dark: rgba(7, 7, 6, 1); */
 $container-color: transparent;
 
-$fiveColors: (
-  "white": #ffffff,
-  "red": #ed1b24,
-  "green": #00a652,
-  "blue": #2e3192,
-  "yellow": #fdaf17
-);
+$white: #ffffff;
+$red: #ed1b24;
+$green: #00a652;
+$blue: #2e3192;
+$yellow: #fdaf17;
+
 /* $fiveColors: (
     "green": green,
 ) */
@@ -41,11 +40,24 @@ $fiveColors: (
   /* z-index: 1; */
   animation: glow 3s ease-in-out infinite alternate;
 }
+
+.tam span {
+  z-index: 10;
+}
+
 .center-circle {
   /* background-color: rgba(34,34,34,1); */
   filter: blur(0.8rem) brightness(0.9);
   opacity: 0.8;
-  background-color: $bg-color;
+  /* background-color: $bg-color; */
+  background: repeating-conic-gradient(
+    $white 0 6deg,
+    $red 0 12deg,
+    $green 0 18deg,
+    $blue 0 24deg,
+    $yellow 0 30deg
+  );
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,7 +76,14 @@ $fiveColors: (
   transform: translate(-50%, -55%) scale(0.3);
   opacity: 0;
   animation: scale 10s cubic-bezier(0.17, 0.67, 0.27, 0.24) infinite;
-  background: radial-gradient(circle at center, transparent 0, $bg-color 60%);
+  /* background: radial-gradient(circle at center, transparent 0, $bg-color 60%); */
+  background: repeating-conic-gradient(
+    $white 0 6deg,
+    $red 0 12deg,
+    $green 0 18deg,
+    $blue 0 24deg,
+    $yellow 0 30deg
+  );
 }
 .hamburger-container {
   cursor: pointer;

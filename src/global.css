@@ -38,7 +38,10 @@ body,
 }
 .tam-container.dark {
   background: #070706;
-  /* transition: all 1000ms linear; */
+}
+
+.tam-container.dark::before {
+  background: #070706;
 }
 
 .container-schedule {

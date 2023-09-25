@@ -25,7 +25,6 @@
 
 <div class="container container-tam">
   <main class="tam {extraTamClass}" on:click={fullScreenAction}>
-    <span>ཏཱྂ</span>
     {#if $movingLight}
       {#each Array(growCirclesCount) as _, index (index)}
         <div
@@ -39,6 +38,7 @@
     {#if $bgLightEnabled}
       <div class="center-circle" transition:fade={{ duration: 200 }} />
     {/if}
+    <span>ཏཱྂ</span>
   </main>
 
   <div class="hamburger-container">
