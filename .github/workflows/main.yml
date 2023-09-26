@@ -101,5 +101,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
         with:
-          folder: ./dist/
+          folder: "./dist/"
           clean: true
