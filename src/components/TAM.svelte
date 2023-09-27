@@ -36,7 +36,9 @@
     {/if}
 
     {#if $bgLightEnabled}
-      <div class="center-circle" transition:fade={{ duration: 200 }} />
+      <div class="center-circle" transition:fade={{ duration: 200 }}>
+        <div class="center-cirle-bg" />
+      </div>
     {/if}
     <span>ཏཱྂ</span>
   </main>
