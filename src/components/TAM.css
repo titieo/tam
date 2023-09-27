@@ -13,9 +13,6 @@ $green: #00a652;
 $blue: #2e3192;
 $yellow: #fdaf17;
 
-/* $fiveColors: (
-    "green": green,
-) */
 .container-tam {
   overflow: hidden;
   font-family: "Uchen", serif;
@@ -43,29 +40,29 @@ $yellow: #fdaf17;
 
 .tam span {
   z-index: 10;
+  background-image: linear-gradient(
+    from top to bottom,
+    $red,
+    $red 10%,
+    $white 10%,
+    $white 20%,
+    $tam-color 20%,
+    $tam-color 100%
+  );
 }
 
 .center-circle {
-  /* background-color: rgba(34,34,34,1); */
-  filter: blur(0.8rem) brightness(0.9);
+  filter: blur(0.8rem) brightness(1.3);
   opacity: 0.8;
-  /* background-color: $bg-color; */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
-
-  /* border: 2rem solid $bg-color; */
   width: 60rem;
   height: 60rem;
   opacity: 0.6;
   animation: shrink-grow 20s ease-in-out infinite;
-  /* padding: 5rem; */
-  /* border: 20px solid; */
   border-radius: 100rem;
-
-  /* overflow: hidden; */
-  /* background-clip: padding-box;s */
   z-index: 1;
 
   background-image: radial-gradient(
@@ -81,43 +78,6 @@ $yellow: #fdaf17;
     $yellow 66%,
     $white 66%
   );
-}
-
-.center-circle::before {
-  /* content: ""; */
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  /* background-image: radial-gradient(
-    circle,
-    transparent 0%,
-    $blue 30rem,
-    $blue 34rem,
-    $green 34rem,
-    $green 48rem,
-    $red 48rem,
-    $red 50rem,
-    $yellow 52rem,
-    $yellow 56rem,
-    $white 56rem,
-    $white 60rem
-  ); */
-  background-image: radial-gradient(
-    circle,
-    transparent 0%,
-    $blue 80%,
-    $blue 84%,
-    $green 84%,
-    $green 88%,
-    $red 88%,
-    $red 92%,
-    $yellow 92%,
-    $yellow 94%,
-    $white 94%,
-    $white 100%
-  );
-
-  border-radius: inherit;
 }
 
 .center-cirle-bg {
