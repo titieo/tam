@@ -103,6 +103,7 @@ $yellow: #fdaf17;
   background-image: radial-gradient(
     circle,
     transparent 0%,
+    transparent 30%,
     $blue 45%,
     $blue 51%,
     $green 51%,

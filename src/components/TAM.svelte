@@ -15,7 +15,8 @@
   const growCirclesCount = 2;
   let hamburgerOpen = true;
   let bgLightEnabled = storage(writable(false), "bgLightEnabled"),
-    movingLight = storage(writable(true), "movingLight");
+    movingLight = storage(writable(true), "movingLight"),
+    centralRainbow = storage(writable(true), "centralRainbow");
 
   // darkTAM = storage(writable(false), "dark")
   import { fade } from "svelte/transition";
@@ -37,12 +38,15 @@
 
     {#if $bgLightEnabled}
       <div class="center-circle" transition:fade={{ duration: 200 }}>
-        <div class="center-cirle-bg" />
+        {#if $centralRainbow}
+          <div class="center-cirle-bg" />
+        {/if}
       </div>
     {/if}
     <p>
-      <span>ཏཱྂ</span> <span class="nadi-white"><span>ཏཱྂ </span> ྂ</span>
-      <span class="nadi-red"><span>ཏཱྂ </span> ཾ</span>
+      <!-- <span>ཏཱྂ</span> <span class="nadi-white"><span>ཏཱྂ </span> ྂ</span>
+      <span class="nadi-red"><span>ཏཱྂ </span> ཾ</span> -->
+      <span>ཏཱྂ</span>
     </p>
     <div class="moon-disc" />
   </main>
@@ -72,6 +76,16 @@
               bind:checked={$bgLightEnabled}
             />
             <label for="bgLightEnabled">bgLightEnabled</label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              name="centralRainbow"
+              id="centralRainbow"
+              bind:checked={$centralRainbow}
+            />
+            <label for="centralRainbow">centralRainbow</label>
           </li>
 
           <li>
