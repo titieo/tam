@@ -40,7 +40,11 @@
         <div class="center-cirle-bg" />
       </div>
     {/if}
-    <span>ཏཱྂ</span>
+    <p>
+      <span>ཏཱྂ</span> <span class="nadi-white"><span>ཏཱྂ </span> ྂ</span>
+      <span class="nadi-red"><span>ཏཱྂ </span> ཾ</span>
+    </p>
+    <div class="moon-disc" />
   </main>
 
   <div class="hamburger-container">

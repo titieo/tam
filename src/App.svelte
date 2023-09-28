@@ -11,7 +11,7 @@
   let md = window.matchMedia("(min-width: 768px)");
   let disableDragNavigation = false;
   //   let darkTAM = storage(writable(false), "dark");
-  if (!md) disableDragNavigation = true;
+  if (md) disableDragNavigation = true;
 </script>
 
 <Fullpage disableArrowsNavigation disableDragNavigation>
