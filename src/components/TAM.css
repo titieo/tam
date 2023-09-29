@@ -1,4 +1,4 @@
-$tam-color: rgba(0, 137, 52, 1);
+$tam-color: rgba(0, 137, 52, 0.9);
 $bg-color: rgba(0, 190, 52, 0.4);
 /* $glow-from:rgba(0, 150, 52, 0.7);
 $glow-to:rgba(0, 220, 52, 0.9); */
@@ -52,6 +52,7 @@ $yellow: #fdaf17;
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: 1;
+  filter: blur(0.1rem) brightness(1.9);
 }
 .tam > p > span {
   grid-row: 1/1;
@@ -80,6 +81,9 @@ $yellow: #fdaf17;
   width: 30rem;
   border-radius: 100rem;
   background: $white;
+  filter: blur(1.5rem) brightness(1.5);
+  /* filter: blur(1.5rem); */
+  backdrop-filter: blur(10px);
   /* background: radial-gradient(ellipse, $white, $white 30%, orange 60%); */
   clip-path: ellipse(200px 50px);
   z-index: 5;
@@ -88,14 +92,14 @@ $yellow: #fdaf17;
 
 .center-circle {
   filter: blur(0.8rem) brightness(1.3);
-  opacity: 0.8;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
   width: 60rem;
   height: 60rem;
-  opacity: 0.6;
+  opacity: 0.3;
+  /* TODO: opacity */
   animation: shrink-grow 20s ease-in-out infinite;
   border-radius: 100rem;
   z-index: 1;
@@ -241,7 +245,7 @@ $yellow: #fdaf17;
 
 @keyframes scale {
   45% {
-    opacity: 0.8;
+    opacity: 0.2;
     filter: blur(0.9rem) brightness(1.1);
   }
 
