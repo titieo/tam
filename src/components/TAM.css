@@ -83,8 +83,8 @@ $yellow: #fdaf17;
   background: $white;
   filter: blur(1.5rem) brightness(1.5);
   /* filter: blur(1.5rem); */
-  backdrop-filter: blur(10px);
   /* background: radial-gradient(ellipse, $white, $white 30%, orange 60%); */
+  backdrop-filter: blur(10px);
   clip-path: ellipse(7rem 2.5rem);
   z-index: 5;
   transform: translateX(-50%) translateY(45%);
@@ -286,6 +286,8 @@ $yellow: #fdaf17;
 
   .moon-disc {
     clip-path: ellipse(11rem 3.125rem);
+
+    transform: translateX(-50%) translateY(43%);
   }
 
   .center-circle {

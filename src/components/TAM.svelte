@@ -16,7 +16,7 @@
   let hamburgerOpen = true;
   let bgLightEnabled = storage(writable(false), "bgLightEnabled"),
     movingLight = storage(writable(true), "movingLight"),
-    centralRainbow = storage(writable(true), "centralRainbow");
+    centralRainbow = storage(writable(false), "centralRainbow");
 
   // darkTAM = storage(writable(false), "dark")
   import { fade } from "svelte/transition";
