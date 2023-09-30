@@ -285,8 +285,9 @@ $yellow: #fdaf17;
 
   .moon-disc {
     clip-path: ellipse(11rem 3.125rem);
-
-    transform: translateX(-50%) translateY(43%);
+    background: radial-gradient(ellipse farthest-corner, white, transparent);
+    filter: brightness(1.2) blur(1rem);
+    transform: translateX(-49%) translateY(35%);
   }
 
   .center-circle {
