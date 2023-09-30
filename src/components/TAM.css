@@ -26,7 +26,7 @@ $yellow: #fdaf17;
   text-rendering: optimizeLegibility;
   font-size: 12rem;
   /* color: rgba(0, 99, 38,1); */ /*orginal color*/
-  color: $tam-color;
+  /* color: $tam-color; */
   position: absolute;
   display: flex;
   justify-content: center;
@@ -45,32 +45,6 @@ $yellow: #fdaf17;
     $tam-color 20%,
     $tam-color 100%
   ); */
-}
-
-.tam > p {
-  z-index: 10;
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: 1;
-  filter: blur(0.1rem) brightness(1.9);
-}
-.tam > p > span {
-  grid-row: 1/1;
-  grid-column: 1/1;
-}
-.tam > p > span span {
-  /* display: none; */
-  visibility: hidden;
-}
-.nadi-white {
-  color: $white;
-  transform: translateX(-25%);
-}
-.nadi-red {
-  color: $red;
-  transform: translateX(-25%) translateY(-10%) scale(0.9);
-  /* transform: translateX(-28%) translateY(-7%) scale(0.9); */
-  text-shadow: none;
 }
 
 .moon-disc {
@@ -95,7 +69,7 @@ $yellow: #fdaf17;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -50%);
   width: 35rem;
   height: 35rem;
   opacity: 0.3;
@@ -136,6 +110,31 @@ $yellow: #fdaf17;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 100rem;
+}
+.tam-icon {
+  z-index: 10;
+  height: 30rem;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-10%);
+  filter: blur(0.12rem) brightness(1.9);
+  /* animation: glow 3s ease-in-out infinite alternate; */
+}
+.tam-icon svg {
+  filter: drop-shadow(0 0 2rem #fff);
+}
+.fil1 {
+  fill: $white;
+  fill-rule: nonzero;
+}
+.fil0 {
+  fill: $red;
+  fill-rule: nonzero;
+}
+.fil2 {
+  fill: $tam-color;
+  fill-rule: nonzero;
 }
 
 .center-circle.animated {

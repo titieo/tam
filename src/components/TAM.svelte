@@ -3,6 +3,7 @@
   import { storage } from "svelte-legos";
   import { writable } from "svelte/store";
   import { darkTAM } from "./TAM";
+  import TamIcon from "./TamIcon.svelte";
   const fullScreenAction = () => {
     if (screenfull.isEnabled) {
       screenfull.toggle();
@@ -20,6 +21,7 @@
 
   // darkTAM = storage(writable(false), "dark")
   import { fade } from "svelte/transition";
+  //   import TamIcon from "./TamIcon.svelte";
   export let extraTamClass = "";
   //   import "./TAM.css";
 </script>
@@ -43,11 +45,14 @@
         {/if}
       </div>
     {/if}
-    <p>
-      <!-- <span>ཏཱྂ</span> <span class="nadi-white"><span>ཏཱྂ </span> ྂ</span>
+    <!-- <p> -->
+    <!-- <span>ཏཱྂ</span> <span class="nadi-white"><span>ཏཱྂ </span> ྂ</span>
       <span class="nadi-red"><span>ཏཱྂ </span> ཾ</span> -->
-      <span>ཏཱྂ</span>
-    </p>
+    <!-- <span>ཏཱྂ</span> -->
+    <div class="tam-icon">
+      <TamIcon />
+    </div>
+    <!-- </p> -->
     <div class="moon-disc" />
   </main>
 
