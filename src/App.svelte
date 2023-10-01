@@ -2,7 +2,7 @@
   import { storage } from "svelte-legos";
   import { writable } from "svelte/store";
   import Tam from "./components/TAM.svelte";
-  import { darkTAM } from "./components/TAM";
+  import { darkBg } from "./components/TAM";
   import GreenTara from "./components/Green Tara.svelte";
   //   import Schedule from "./components/Schedule.svelte";
   //   import Clock from "./components/Clocks.svelte";
@@ -10,7 +10,7 @@
   import { Fullpage, FullpageSection, FullpageSlide } from "svelte-fullpage";
   let md = window.matchMedia("(min-width: 768px)");
   let disableDragNavigation = false;
-  //   let darkTAM = storage(writable(false), "dark");
+  //   let darkBg = storage(writable(false), "dark");
   if (md) disableDragNavigation = true;
 </script>
 
@@ -24,7 +24,7 @@
     </FullpageSlide>
   </FullpageSection> -->
   <FullpageSection title="Seed Syllables">
-    <FullpageSlide title="TAM" class="tam-container {$darkTAM ? 'dark' : ''}">
+    <FullpageSlide title="TAM" class="tam-container {$darkBg ? 'dark' : ''}">
       <Tam />
     </FullpageSlide>
     <FullpageSlide title="Green Tara" style="background: #070706"

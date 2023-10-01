@@ -2,7 +2,7 @@
   import screenfull from "screenfull";
   import { storage } from "svelte-legos";
   import { writable } from "svelte/store";
-  import { darkTAM } from "./TAM";
+  import { darkBg } from "./TAM";
   import TamIcon from "./TamIcon.svelte";
   const fullScreenAction = () => {
     if (screenfull.isEnabled) {
@@ -17,9 +17,10 @@
   let hamburgerOpen = true;
   let bgLightEnabled = storage(writable(false), "bgLightEnabled"),
     movingLight = storage(writable(true), "movingLight"),
+    darkerTAM = storage(writable(false), "darkerTAM"),
     centralRainbow = storage(writable(false), "centralRainbow");
 
-  // darkTAM = storage(writable(false), "dark")
+  // darkBg = storage(writable(false), "dark")
   import { fade } from "svelte/transition";
   //   import TamIcon from "./TamIcon.svelte";
   export let extraTamClass = "";
@@ -49,7 +50,7 @@
     <!-- <span>ཏཱྂ</span> <span class="nadi-white"><span>ཏཱྂ </span> ྂ</span>
       <span class="nadi-red"><span>ཏཱྂ </span> ཾ</span> -->
     <!-- <span>ཏཱྂ</span> -->
-    <div class="tam-icon">
+    <div class="tam-icon {$darkerTAM ? 'dark' : ''}">
       <TamIcon />
     </div>
     <!-- </p> -->
@@ -65,11 +66,11 @@
         <li>
           <input
             type="checkbox"
-            name="darkTAM"
-            id="darkTAM"
-            bind:checked={$darkTAM}
+            name="darkBg"
+            id="darkBg"
+            bind:checked={$darkBg}
           />
-          <label for="darkTAM">darkTAM</label>
+          <label for="darkBg">darkBg</label>
         </li>
 
         <ul>
@@ -81,6 +82,16 @@
               bind:checked={$bgLightEnabled}
             />
             <label for="bgLightEnabled">bgLightEnabled</label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              name="darkerTAM"
+              id="darkerTAM"
+              bind:checked={$darkerTAM}
+            />
+            <label for="darkerTAM">darkerTAM</label>
           </li>
 
           <li>

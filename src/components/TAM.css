@@ -123,17 +123,41 @@ $yellow: #fdaf17;
 }
 .tam-icon svg {
   filter: drop-shadow(0 0 2rem #fff);
+  /* transition: all 200ms; */
+}
+
+.tam-icon svg * {
+  transition: all 200ms;
 }
 .fil1 {
   fill: $white;
+  /* fill: #fffdfc; */
   fill-rule: nonzero;
 }
 .fil0 {
+  /* fill: #fb0206; */
   fill: $red;
   fill-rule: nonzero;
 }
 .fil2 {
+  /* fill: #17552a; */
   fill: $tam-color;
+  fill-rule: nonzero;
+}
+
+.dark .fil1 {
+  /* fill: $white; */
+  fill: #fffdfc;
+  fill-rule: nonzero;
+}
+.dark .fil0 {
+  fill: #fb0206;
+  /* fill: $red; */
+  fill-rule: nonzero;
+}
+.dark .fil2 {
+  fill: #17552a;
+  /* fill: $tam-color; */
   fill-rule: nonzero;
 }
 
